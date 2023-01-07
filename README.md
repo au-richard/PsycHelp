@@ -1,1 +1,1 @@
-# ThePsycHelp
+# Psych-App
