@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:psych_app/pages/login.dart';
+import 'package:animate_do/animate_do.dart';
+import 'package:psych_app/pages/register.dart';
 
 void main() {
   runApp(const ThePsycHelp());
@@ -27,16 +30,67 @@ class LandingPage extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text(
-              'Welcome',
-              style: TextStyle(fontFamily: 'VarelaRound', fontSize: 52),
+          children: [
+            FadeIn(
+              animate: true,
+              delay: Duration(milliseconds: 1000),
+              duration: Duration(seconds: 1),
+              child: const Text(
+                'Welcome',
+                style: TextStyle(fontFamily: 'VarelaRound', fontSize: 52),
+              ),
             ),
-            Text(
-              'Welcome',
-              style: TextStyle(fontFamily: 'Alice', fontSize: 52),
+            FadeIn(
+              animate: true,
+              delay: Duration(milliseconds: 1500),
+              duration: Duration(seconds: 1),
+              child: Image.asset('assets/images/psycHelp-logo.png'),
             ),
-            Text('Button'),
+            const SizedBox(height: 20.0),
+            FadeIn(
+              animate: true,
+              delay: Duration(milliseconds: 2000),
+              duration: Duration(seconds: 1),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) {
+                            return const LoginPage();
+                          },
+                        ),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.redAccent,
+                      foregroundColor: Colors.white,
+                      minimumSize: const Size(150, 40),
+                    ),
+                    child: const Text('Login'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) {
+                            return const RegisterPage();
+                          },
+                        ),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.redAccent,
+                      foregroundColor: Colors.white,
+                      minimumSize: const Size(150, 40),
+                    ),
+                    child: const Text('Register'),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
