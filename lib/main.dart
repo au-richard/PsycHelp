@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:psych_app/pages/login.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:psych_app/pages/register.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 void main() {
   runApp(const ThePsycHelp());
@@ -10,6 +11,7 @@ void main() {
 class ThePsycHelp extends StatelessWidget {
   const ThePsycHelp({super.key});
 
+  
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
@@ -21,7 +23,7 @@ class ThePsycHelp extends StatelessWidget {
 }
 
 class LandingPage extends StatelessWidget {
-  const LandingPage({super.key});
+  const LandingPage({super.key});  
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +39,7 @@ class LandingPage extends StatelessWidget {
               duration: Duration(seconds: 1),
               child: const Text(
                 'Welcome',
-                style: TextStyle(fontFamily: 'VarelaRound', fontSize: 52),
+                style: TextStyle(fontFamily: 'VarelaRound', fontSize: 64),
               ),
             ),
             FadeIn(
@@ -65,11 +67,11 @@ class LandingPage extends StatelessWidget {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.redAccent,
+                      backgroundColor: Colors.blue[600],
                       foregroundColor: Colors.white,
                       minimumSize: const Size(150, 40),
                     ),
-                    child: const Text('Login'),
+                    child: const Text('Login', style: TextStyle(fontSize: 18)),
                   ),
                   ElevatedButton(
                     onPressed: () {
@@ -82,11 +84,11 @@ class LandingPage extends StatelessWidget {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.redAccent,
+                      backgroundColor: Colors.blue[600],
                       foregroundColor: Colors.white,
                       minimumSize: const Size(150, 40),
                     ),
-                    child: const Text('Register'),
+                    child: const Text('Register', style: TextStyle(fontSize: 18)),
                   ),
                 ],
               ),
