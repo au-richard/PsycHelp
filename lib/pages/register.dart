@@ -34,12 +34,19 @@ class _MyCustomFormState extends State<MyCustomForm> {
       child: Form(
         key: _formKey,
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text('First Name'),
-            TextFormField(              
+            const Text(
+              'First Name',
+              textAlign: TextAlign.center,
+            ),
+            TextFormField(
+              // style: ,
+              textAlign: TextAlign.center,
+              textAlignVertical: TextAlignVertical.center,
               decoration: const InputDecoration(
-                hintText: "Enter first name",                
+                hintText: "Enter first name",
               ),
               validator: (value) {
                 if (value == null || value.isEmpty) {
@@ -50,6 +57,8 @@ class _MyCustomFormState extends State<MyCustomForm> {
             ),
             const Text('Email'),
             TextFormField(
+              textAlign: TextAlign.center,
+              textAlignVertical: TextAlignVertical.center,
               decoration: const InputDecoration(hintText: "Enter email"),
               validator: (value) {
                 if (value == null || value.isEmpty) {
@@ -60,6 +69,11 @@ class _MyCustomFormState extends State<MyCustomForm> {
             ),
             const Text('Password'),
             TextFormField(
+              textAlign: TextAlign.center,
+              textAlignVertical: TextAlignVertical.center,
+              obscureText: true,
+              enableSuggestions: false,
+              autocorrect: false,
               decoration: const InputDecoration(hintText: "Enter password"),
               validator: (value) {
                 if (value == null || value.isEmpty) {
@@ -71,6 +85,9 @@ class _MyCustomFormState extends State<MyCustomForm> {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 16.0),
               child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(250, 40),
+                ),
                 onPressed: () {
                   // Validate returns true if the form is valid, or false otherwise.
                   if (_formKey.currentState!.validate()) {
