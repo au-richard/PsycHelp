@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:psych_app/pages/map.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
@@ -69,7 +69,14 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              _widgetOptions.elementAt(_selectedIndex),
+              // const Map(),
+            ],
+          ),
+        ),
       ),
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll

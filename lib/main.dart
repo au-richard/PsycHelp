@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:psych_app/pages/home.dart';
+import 'package:psych_app/pages/map.dart';
 import 'package:psych_app/pages/register.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -80,7 +81,7 @@ class LandingPage extends StatelessWidget {
                       Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: (BuildContext context) {
-                            return const RegisterPage();
+                            return const Map();
                           },
                         ),
                       );
