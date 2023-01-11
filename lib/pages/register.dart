@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+// import 'package:flutter/services.dart';
+// import '../widgets/button_widget.dart';
+// import '../widgets/email_field_widget.dart';
+// import '../widgets/password_field_widget.dart';
 
 class RegisterPage extends StatelessWidget {
   const RegisterPage({super.key});
@@ -16,6 +20,20 @@ class RegisterPage extends StatelessWidget {
     );
   }
 }
+
+// class MyCustomForm extends StatefulWidget {
+//   const MyCustomForm({super.key});
+
+//   @override
+//   State<MyCustomForm> createState() => _MyCustomFormState();
+// }
+
+// class _MyCustomFormState extends State<MyCustomForm> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container();
+//   }
+// }
 
 class MyCustomForm extends StatefulWidget {
   const MyCustomForm({super.key});

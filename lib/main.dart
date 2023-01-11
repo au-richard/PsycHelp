@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:psych_app/pages/login.dart';
 import 'package:animate_do/animate_do.dart';
+import 'package:psych_app/pages/home.dart';
 import 'package:psych_app/pages/register.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -11,19 +11,21 @@ void main() {
 class ThePsycHelp extends StatelessWidget {
   const ThePsycHelp({super.key});
 
-  
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'The PsycHelp',
       debugShowCheckedModeBanner: false,
-      home: LandingPage(),
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+      ),
+      home: const LandingPage(),
     );
   }
 }
 
 class LandingPage extends StatelessWidget {
-  const LandingPage({super.key});  
+  const LandingPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +63,7 @@ class LandingPage extends StatelessWidget {
                       Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: (BuildContext context) {
-                            return const LoginPage();
+                            return const HomePage(title: "The PsycHelp");
                           },
                         ),
                       );
@@ -88,7 +90,8 @@ class LandingPage extends StatelessWidget {
                       foregroundColor: Colors.white,
                       minimumSize: const Size(150, 40),
                     ),
-                    child: const Text('Register', style: TextStyle(fontSize: 18)),
+                    child:
+                        const Text('Register', style: TextStyle(fontSize: 18)),
                   ),
                 ],
               ),
