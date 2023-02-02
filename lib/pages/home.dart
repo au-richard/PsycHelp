@@ -15,7 +15,9 @@ class _HomePageState extends State<HomePage> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Map(),
+    Flexible(
+      child: Map(),
+    ),
     Icon(
       Icons.camera,
       size: 150,
@@ -24,14 +26,14 @@ class _HomePageState extends State<HomePage> {
       'Index 1: Business',
       style: optionStyle,
     ),
-    // Text(
-    //   'Index 2: School',
-    //   style: optionStyle,
-    // ),
-    // Text(
-    //   'Index 3: Settings',
-    //   style: optionStyle,
-    // ),
+    Text(
+      'Index 2: School',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 3: Settings',
+      style: optionStyle,
+    ),
   ];
 
   void _onItemTapped(int index) {
@@ -70,12 +72,10 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: Center(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              _widgetOptions.elementAt(_selectedIndex),
-            ],
-          ),
+        child: Column(
+          children: [
+            _widgetOptions.elementAt(_selectedIndex),
+          ],
         ),
       ),
       drawer: Drawer(
@@ -136,7 +136,7 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            //icon: {Icon(Icons.home), _onItemTapped(Navigator.push(Map()))},
+            // icon: {Icon(Icons.home), _onItemTapped(Navigator.push(Map()))},
             icon: Icon(Icons.home),
             label: 'Home',
 
