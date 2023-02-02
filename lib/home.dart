@@ -15,22 +15,23 @@ class _HomePageState extends State<HomePage> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
+    Map(),
+    Icon(
+      Icons.camera,
+      size: 150,
     ),
     Text(
       'Index 1: Business',
       style: optionStyle,
     ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: Settings',
-      style: optionStyle,
-    ),
+    // Text(
+    //   'Index 2: School',
+    //   style: optionStyle,
+    // ),
+    // Text(
+    //   'Index 3: Settings',
+    //   style: optionStyle,
+    // ),
   ];
 
   void _onItemTapped(int index) {
@@ -73,7 +74,6 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             children: [
               _widgetOptions.elementAt(_selectedIndex),
-              // const Map(),
             ],
           ),
         ),
@@ -136,8 +136,10 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
+            //icon: {Icon(Icons.home), _onItemTapped(Navigator.push(Map()))},
             icon: Icon(Icons.home),
             label: 'Home',
+
             // backgroundColor: Colors.red,
           ),
           BottomNavigationBarItem(
@@ -148,6 +150,7 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.list),
             label: 'Glossary',
+
             // backgroundColor: Colors.purple,
           ),
         ],
