@@ -10,8 +10,8 @@
 .history
 .svn/
 migrate_working_dir/
-./ios/Runner/AppDelegate.swift
-./android/app/src/main/AndroidManifest.xml
+ios/Runner/AppDelegate.swift
+android/app/src/main/AndroidManifest.xml
 
 # IntelliJ related
 *.iml
