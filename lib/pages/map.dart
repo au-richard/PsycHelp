@@ -3,6 +3,8 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'dart:async';
 import 'package:geolocator/geolocator.dart';
 
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 class Map extends StatefulWidget {
   const Map({super.key});
 
@@ -10,7 +12,8 @@ class Map extends StatefulWidget {
   State<Map> createState() => _MapState();
 }
 
-class _MapState extends State<Map> {
+class _MapState extends State<Map> { 
+
   final Completer<GoogleMapController> _controller =
       Completer<GoogleMapController>();
 
@@ -96,10 +99,16 @@ class _MapState extends State<Map> {
   ];
 
   @override
+  void initState() {
+    super.initState();    
+  }
+
+  
+
   Widget build(BuildContext context) {
     return Scaffold(
       body: GoogleMap(
-        mapType: MapType.normal,
+        mapType: MapType.normal,       
         initialCameraPosition: _kGooglePlex,
         markers: Set<Marker>.of(_markers),
         onMapCreated: (GoogleMapController controller) {

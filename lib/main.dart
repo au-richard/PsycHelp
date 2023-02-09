@@ -20,7 +20,7 @@ class ThePsycHelp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const LandingPage(),
+      home: const Map(),
     );
   }
 }

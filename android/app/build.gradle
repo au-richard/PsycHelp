@@ -61,6 +61,17 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+
+    // def api_key_properties = new Properties()
+    // def api_key_prop_file = rootProject.file("api_key.properties")
+    // if (api_key_prop_file.exists()) {
+    //     api_key_properties.load(new FileInputStream(api_key_prop_file))
+    // }
+
+    // buildTypes.each {
+    //     it.buildConfigField "String", "API_KEY", api_key_properties['api_key']
+    // }
+
 }
 
 flutter {
