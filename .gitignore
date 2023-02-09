@@ -13,6 +13,9 @@ migrate_working_dir/
 ios/Runner/AppDelegate.swift
 android/app/src/main/AndroidManifest.xml
 
+#Ignore build directories
+build/
+
 # IntelliJ related
 *.iml
 *.ipr
