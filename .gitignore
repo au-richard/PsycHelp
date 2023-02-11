@@ -10,8 +10,12 @@
 .history
 .svn/
 migrate_working_dir/
+
+# Hiding API Key
 ios/Runner/AppDelegate.swift
 android/app/src/main/AndroidManifest.xml
+env.dart
+ios/Runner/GoogleService-Info.plist
 
 #Ignore build directories
 build/
