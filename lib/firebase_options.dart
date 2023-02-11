@@ -13,7 +13,6 @@ import 'package:flutter/foundation.dart'
 /// await Firebase.initializeApp(
 ///   options: DefaultFirebaseOptions.currentPlatform,
 /// );
-/// ```
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
@@ -63,7 +62,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '931553854918',
     projectId: 'psychelp-flutter',
     storageBucket: 'psychelp-flutter.appspot.com',
-    iosClientId: '931553854918-ba0hce6q6vdq0e31d3ne5u9b2mqr0940.apps.googleusercontent.com',
+    iosClientId:
+        '931553854918-ba0hce6q6vdq0e31d3ne5u9b2mqr0940.apps.googleusercontent.com',
     iosBundleId: 'com.ThePsycHelp.PsycHelp',
   );
 }
