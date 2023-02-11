@@ -1,4 +1,4 @@
-package com.example.psych_app
+package com.ThePsycHelp.PsycHelp
 
 import io.flutter.embedding.android.FlutterActivity
 
